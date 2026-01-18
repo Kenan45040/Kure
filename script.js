@@ -9,6 +9,9 @@ function Kolay(){
 function Orta(){
   window.location.href="Bot2.html";
 }
+function Zor(){
+  window.location.href="Bot3.html";
+}
 function showBotMenu() {
   document.getElementById("menu").classList.add("hidden");
   document.getElementById("botMenu").classList.remove("hidden");
@@ -24,3 +27,4 @@ function startBot(level) {
   botLevel = level;
 
 }
+
