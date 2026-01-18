@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Arka plan */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #2c2c54, #0f0f1a);
+  z-index: -1;
+}
+
+/* Genel ekran */
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Başlık */
+h1 {
+  font-size: 56px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+/* Kartlar */
+.cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 260px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+/* Zorluk renkleri */
+.easy { border: 2px solid #3aff7a; }
+.medium { border: 2px solid #ffd93a; }
+.hard { border: 2px solid #ff4c4c; }
+
+/* Geri butonu */
+.back {
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.back:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Gizleme */
+.hidden {
+  display: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Küre Oyunu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="screen" id="menu">
+  <h1>KÜRE OYUNU</h1>
+  <p class="subtitle">Strateji • Sıkıştırma • Zeka</p>
+
+  <div class="cards">
+    <div class="card" onclick="startPvP()">
+      <h2>👥 Karşılıklı</h2>
+      <p>İki oyuncu aynı ekranda</p>
+    </div>
+
+    <div class="card" onclick="showBotMenu()">
+      <h2>🤖 Bot’a Karşı</h2>
+      <p>Yapay zekaya meydan oku</p>
+    </div>
+  </div>
+</div>
+
+<div class="screen hidden" id="botMenu">
+  <h1>BOT ZORLUĞU</h1>
+
+  <div class="cards">
+    <div class="card easy" onclick="Kolay()">
+      <h2>Kolay</h2>
+      <p>Yeni başlayanlar için</p>
+    </div>
+
+    <div class="card medium" onclick="Orta()">
+      <h2>Orta</h2>
+      <p>Daha dikkatli oynar</p>
+    </div>
+
+    <div class="card hard" onclick="startBot('hard')">
+      <h2>Zor</h2>
+      <p>Stratejik hamleler</p>
+    </div>
+  </div>
+
+  <button class="back" onclick="backToMenu()">← Geri</button>
+</div>
+
+<div class="screen hidden" id="game">
+  <p id="info"></p>
+  <div id="board"></div>
+  <button class="back" onclick="resetGame()">⟲ Yeniden Başla</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
